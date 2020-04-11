@@ -1,15 +1,23 @@
+/**
+ * Bruce
+ * This class creates a grid object and checks that the sum of each row, column and diagonal is the same
+ * 2020/4/10
+ */
 public class MagicSquare {
     private int[][] grid;
+    //start
     public MagicSquare(int[][] g) {
         grid = g;
     }
-   public int rowSum(int row) {
+    //Find the sum of all integers in grid row
+    public int rowSum(int row) {
         int sum = 0;
         for(int i = 0; i < grid[row].length; i++){
             sum += grid[row][i];
         }
         return sum;
     }
+    //Sum of all integers in column
     public int colSum(int col) {
         int sum = 0;
         for(int i = 0; i < grid.length; i++){
@@ -17,6 +25,7 @@ public class MagicSquare {
         }
         return sum;
     }
+    //Sum of integers in diagonal
     public int upDiagSum() {
         int sum = 0;
         int row = grid.length - 1;
@@ -27,6 +36,7 @@ public class MagicSquare {
         }
         return sum;
     }
+    //Sum of integers in diagonal
     public int downDiagSum() {
         int sum = 0;
         int row = 0;
@@ -37,6 +47,7 @@ public class MagicSquare {
         }
         return sum;
     }
+    //check the magic square
     public boolean isMagicSquare() {
         boolean is = true;
         int row = 0;
