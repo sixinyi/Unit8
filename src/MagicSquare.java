@@ -49,7 +49,7 @@ public class MagicSquare {
     }
     //check the magic square
     public boolean isMagicSquare() {
-        boolean is = true;
+        boolean ms = true;
         int row = 0;
         int col = 0;
         for(int i = 0; i < grid.length; i++){
