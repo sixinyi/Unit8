@@ -49,16 +49,12 @@ public class MagicSquare {
     }
     //check the magic square
     public boolean isMagicSquare() {
-        boolean ms = true;
-        int row = 0;
-        int col = 0;
-        for(int i = 0; i < grid.length; i++){
-            row += rowSum(i);
-            col += colSum(i);
-        }
-        row /= grid.length;
-        col /= grid.length;
-        return row == col && col == downDiagSum() && downDiagSum() == upDiagSum();
+        boolean ims = true;
+        int val=rowSum(0);
+        int up=upDiagSum();
+        int do=downDiagSum();
+        
+        return ims
     }
 
     /**
