@@ -52,15 +52,15 @@ public class MagicSquare {
         boolean ims = true;
         int val=rowSum(0);
         int up=upDiagSum();
-        int do=downDiagSum();
+        int down=downDiagSum();
         for(int i = 0; i < grid.length; i++){
             int row = rowSum(i);
             int col = colSum(i);
-            if(val! = row||val != col||val != up||val != down){
-                ret=false;
+            if(val != row||val != col||val != up||val != down){
+                ims = false;
             }
         }
-        return ims
+        return ims;
     }
 
     /**
