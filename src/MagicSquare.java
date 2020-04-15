@@ -53,7 +53,13 @@ public class MagicSquare {
         int val=rowSum(0);
         int up=upDiagSum();
         int do=downDiagSum();
-        
+        for(int i = 0; i < grid.length; i++){
+            int row = rowSum(i);
+            int col = colSum(i);
+            if(val! = row||val != col||val != up||val != down){
+                ret=false;
+            }
+        }
         return ims
     }
 
