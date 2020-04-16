@@ -5,7 +5,10 @@
  */
 public class MagicSquare {
     private int[][] grid;
-    //start
+    /**
+     * start the object
+     * @param g 2d square array object
+     */
     public MagicSquare(int[][] g) {
         grid = g;
     }
@@ -17,7 +20,11 @@ public class MagicSquare {
         }
         return sum;
     }
-    //Sum of all integers in column
+    /**
+     * Sum of all integers in column
+     * @param row and find value of
+     * @return sum of the row given
+     */
     public int colSum(int col) {
         int sum = 0;
         for(int i = 0; i < grid.length; i++){
@@ -25,7 +32,11 @@ public class MagicSquare {
         }
         return sum;
     }
-    //Sum of integers in diagonal
+    /**
+     * Sum of integers in diagonal
+     * @param col given column
+     * @return sum of the given column
+     */
     public int upDiagSum() {
         int sum = 0;
         int row = grid.length - 1;
@@ -36,7 +47,10 @@ public class MagicSquare {
         }
         return sum;
     }
-    //Sum of integers in diagonal
+    /**
+     * Sum of integers in diagonal
+     * @return the sum of given diagonal
+     */
     public int downDiagSum() {
         int sum = 0;
         int row = 0;
@@ -47,7 +61,10 @@ public class MagicSquare {
         }
         return sum;
     }
-    //check the magic square
+    /**
+     * check the magic square
+     * @return boolean is a sqaure or not
+     */
     public boolean isMagicSquare() {
         boolean ims = true;
         int val=rowSum(0);
